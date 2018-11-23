@@ -139,6 +139,21 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void informationDialog() {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setTitle("Permissions requises");
+        builder.setMessage("Vous avez refusé la permission pour cette fonctionnalité. Veuillez l'autoriser si vous souhaitez l'utiliser");
+        builder.setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+        builder.show();
+
+    }
+
     // **** STEP 2 – AJOUT METHODE PERMISSION CALLBACK *******************
 
 
